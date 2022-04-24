@@ -14,8 +14,8 @@ class AnimalTypesTest < ApplicationSystemTestCase
     visit animal_types_url
     click_on "New animal type"
 
-    fill_in "Class", with: @animal_type.Class
-    fill_in "Species", with: @animal_type.Species
+    fill_in "Group", with: @animal_type.group
+    fill_in "Species", with: @animal_type.species
     click_on "Create Animal type"
 
     assert_text "Animal type was successfully created"
@@ -26,8 +26,8 @@ class AnimalTypesTest < ApplicationSystemTestCase
     visit animal_type_url(@animal_type)
     click_on "Edit this animal type", match: :first
 
-    fill_in "Class", with: @animal_type.Class
-    fill_in "Species", with: @animal_type.Species
+    fill_in "Group", with: @animal_type.group
+    fill_in "Species", with: @animal_type.species
     click_on "Update Animal type"
 
     assert_text "Animal type was successfully updated"

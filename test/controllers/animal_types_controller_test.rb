@@ -17,7 +17,7 @@ class AnimalTypesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create animal_type" do
     assert_difference("AnimalType.count") do
-      post animal_types_url, params: { animal_type: { Class: @animal_type.Class, Species: @animal_type.Species } }
+      post animal_types_url, params: { animal_type: { group: @animal_type.group, species: @animal_type.species } }
     end
 
     assert_redirected_to animal_type_url(AnimalType.last)
@@ -34,7 +34,7 @@ class AnimalTypesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update animal_type" do
-    patch animal_type_url(@animal_type), params: { animal_type: { Class: @animal_type.Class, Species: @animal_type.Species } }
+    patch animal_type_url(@animal_type), params: { animal_type: { group: @animal_type.group, species: @animal_type.species } }
     assert_redirected_to animal_type_url(@animal_type)
   end
 
