@@ -1,0 +1,16 @@
+current directory: /home/jd/Ruby/Technikum/vendor/bundle/ruby/3.0.0/gems/strscan-3.0.1/ext/strscan
+/home/jd/.rvm/rubies/ruby-3.0.0/bin/ruby -I /home/jd/.rvm/rubies/ruby-3.0.0/lib/ruby/3.0.0 -r ./siteconf20220406-6785-i6bjrv.rb extconf.rb
+checking for onig_region_memsize() in ruby.h... yes
+creating Makefile
+
+current directory: /home/jd/Ruby/Technikum/vendor/bundle/ruby/3.0.0/gems/strscan-3.0.1/ext/strscan
+make "DESTDIR=" clean
+
+current directory: /home/jd/Ruby/Technikum/vendor/bundle/ruby/3.0.0/gems/strscan-3.0.1/ext/strscan
+make "DESTDIR="
+compiling strscan.c
+linking shared-object strscan.so
+
+current directory: /home/jd/Ruby/Technikum/vendor/bundle/ruby/3.0.0/gems/strscan-3.0.1/ext/strscan
+make "DESTDIR=" install
+/usr/bin/install -m 0755 strscan.so ./.gem.20220406-6785-ve72g9

@@ -1,0 +1,15 @@
+current directory: /home/jd/Ruby/Technikum/vendor/bundle/ruby/3.0.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+/home/jd/.rvm/rubies/ruby-3.0.0/bin/ruby -I /home/jd/.rvm/rubies/ruby-3.0.0/lib/ruby/3.0.0 -r ./siteconf20220406-6785-dp0rhs.rb extconf.rb
+creating Makefile
+
+current directory: /home/jd/Ruby/Technikum/vendor/bundle/ruby/3.0.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /home/jd/Ruby/Technikum/vendor/bundle/ruby/3.0.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+
+current directory: /home/jd/Ruby/Technikum/vendor/bundle/ruby/3.0.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -m 0755 websocket_mask.so ./.gem.20220406-6785-tnu0lx
