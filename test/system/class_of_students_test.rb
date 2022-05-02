@@ -15,6 +15,7 @@ class ClassOfStudentsTest < ApplicationSystemTestCase
     click_on "New class of student"
 
     fill_in "Symbol", with: @class_of_student.symbol
+    fill_in "Teacher", with: @class_of_student.teacher_id
     fill_in "Yearofstart", with: @class_of_student.yearOfStart
     click_on "Create Class of student"
 
@@ -27,6 +28,7 @@ class ClassOfStudentsTest < ApplicationSystemTestCase
     click_on "Edit this class of student", match: :first
 
     fill_in "Symbol", with: @class_of_student.symbol
+    fill_in "Teacher", with: @class_of_student.teacher_id
     fill_in "Yearofstart", with: @class_of_student.yearOfStart
     click_on "Update Class of student"
 

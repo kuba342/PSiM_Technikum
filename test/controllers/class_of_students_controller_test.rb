@@ -17,7 +17,7 @@ class ClassOfStudentsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create class_of_student" do
     assert_difference("ClassOfStudent.count") do
-      post class_of_students_url, params: { class_of_student: { symbol: @class_of_student.symbol, yearOfStart: @class_of_student.yearOfStart } }
+      post class_of_students_url, params: { class_of_student: { symbol: @class_of_student.symbol, teacher_id: @class_of_student.teacher_id, yearOfStart: @class_of_student.yearOfStart } }
     end
 
     assert_redirected_to class_of_student_url(ClassOfStudent.last)
@@ -34,7 +34,7 @@ class ClassOfStudentsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update class_of_student" do
-    patch class_of_student_url(@class_of_student), params: { class_of_student: { symbol: @class_of_student.symbol, yearOfStart: @class_of_student.yearOfStart } }
+    patch class_of_student_url(@class_of_student), params: { class_of_student: { symbol: @class_of_student.symbol, teacher_id: @class_of_student.teacher_id, yearOfStart: @class_of_student.yearOfStart } }
     assert_redirected_to class_of_student_url(@class_of_student)
   end
 

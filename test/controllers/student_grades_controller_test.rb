@@ -17,7 +17,7 @@ class StudentGradesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create student_grade" do
     assert_difference("StudentGrade.count") do
-      post student_grades_url, params: { student_grade: { date: @student_grade.date, grade: @student_grade.grade } }
+      post student_grades_url, params: { student_grade: { course_id: @student_grade.course_id, date: @student_grade.date, grade: @student_grade.grade, student_id: @student_grade.student_id, teacher_id: @student_grade.teacher_id, test_id: @student_grade.test_id } }
     end
 
     assert_redirected_to student_grade_url(StudentGrade.last)
@@ -34,7 +34,7 @@ class StudentGradesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update student_grade" do
-    patch student_grade_url(@student_grade), params: { student_grade: { date: @student_grade.date, grade: @student_grade.grade } }
+    patch student_grade_url(@student_grade), params: { student_grade: { course_id: @student_grade.course_id, date: @student_grade.date, grade: @student_grade.grade, student_id: @student_grade.student_id, teacher_id: @student_grade.teacher_id, test_id: @student_grade.test_id } }
     assert_redirected_to student_grade_url(@student_grade)
   end
 

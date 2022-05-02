@@ -15,6 +15,8 @@ class PresencesTest < ApplicationSystemTestCase
     click_on "New presence"
 
     check "Ispresent" if @presence.isPresent
+    fill_in "Lesson", with: @presence.lesson_id
+    fill_in "Student", with: @presence.student_id
     click_on "Create Presence"
 
     assert_text "Presence was successfully created"
@@ -26,6 +28,8 @@ class PresencesTest < ApplicationSystemTestCase
     click_on "Edit this presence", match: :first
 
     check "Ispresent" if @presence.isPresent
+    fill_in "Lesson", with: @presence.lesson_id
+    fill_in "Student", with: @presence.student_id
     click_on "Update Presence"
 
     assert_text "Presence was successfully updated"

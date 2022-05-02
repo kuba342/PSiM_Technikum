@@ -3,7 +3,9 @@
 one:
   symbol: MyString
   yearOfStart: 1
+  teacher: one
 
 two:
   symbol: MyString
   yearOfStart: 1
+  teacher: two

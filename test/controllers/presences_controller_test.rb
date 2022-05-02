@@ -17,7 +17,7 @@ class PresencesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create presence" do
     assert_difference("Presence.count") do
-      post presences_url, params: { presence: { isPresent: @presence.isPresent } }
+      post presences_url, params: { presence: { isPresent: @presence.isPresent, lesson_id: @presence.lesson_id, student_id: @presence.student_id } }
     end
 
     assert_redirected_to presence_url(Presence.last)
@@ -34,7 +34,7 @@ class PresencesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update presence" do
-    patch presence_url(@presence), params: { presence: { isPresent: @presence.isPresent } }
+    patch presence_url(@presence), params: { presence: { isPresent: @presence.isPresent, lesson_id: @presence.lesson_id, student_id: @presence.student_id } }
     assert_redirected_to presence_url(@presence)
   end
 

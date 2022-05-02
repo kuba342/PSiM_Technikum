@@ -16,6 +16,7 @@ class TeachersTest < ApplicationSystemTestCase
 
     fill_in "Firstname", with: @teacher.firstName
     fill_in "Lastname", with: @teacher.lastName
+    fill_in "User", with: @teacher.user_id
     click_on "Create Teacher"
 
     assert_text "Teacher was successfully created"
@@ -28,6 +29,7 @@ class TeachersTest < ApplicationSystemTestCase
 
     fill_in "Firstname", with: @teacher.firstName
     fill_in "Lastname", with: @teacher.lastName
+    fill_in "User", with: @teacher.user_id
     click_on "Update Teacher"
 
     assert_text "Teacher was successfully updated"

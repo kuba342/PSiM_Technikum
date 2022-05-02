@@ -3,7 +3,11 @@
 one:
   firstName: MyString
   lastName: MyString
+  user: one
+  class_of_student: one
 
 two:
   firstName: MyString
   lastName: MyString
+  user: two
+  class_of_student: two

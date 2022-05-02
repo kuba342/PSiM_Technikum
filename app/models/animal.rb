@@ -1,3 +1,4 @@
 class Animal < ApplicationRecord
-  has_many :animal_types
+  belongs_to :animal_type
+  has_many :lessons
 end

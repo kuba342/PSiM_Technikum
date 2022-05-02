@@ -1,6 +1,6 @@
 class StudentGrade < ApplicationRecord
-  has_many :student
-  has_many :course
-  has_many :test
-  has_many :teacher
+  belongs_to :teacher
+  belongs_to :student
+  belongs_to :course
+  belongs_to :test
 end

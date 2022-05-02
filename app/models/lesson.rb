@@ -1,6 +1,9 @@
 class Lesson < ApplicationRecord
-  has_many :animals
-  has_many :classrooms
-  has_many :class_of_students
-  has_many :teachers
+  belongs_to :teacher
+  belongs_to :class_of_student
+  belongs_to :animal
+  belongs_to :test
+  belongs_to :classroom
+  belongs_to :course
+  has_many :presences
 end

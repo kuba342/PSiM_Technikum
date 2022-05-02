@@ -65,6 +65,6 @@ class PresencesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def presence_params
-      params.require(:presence).permit(:isPresent)
+      params.require(:presence).permit(:isPresent, :student_id, :lesson_id)
     end
 end

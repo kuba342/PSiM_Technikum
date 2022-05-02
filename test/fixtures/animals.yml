@@ -2,8 +2,8 @@
 
 one:
   code: MyString
-  AnimalType_id: 1
+  animal_type: one
 
 two:
   code: MyString
-  AnimalType_id: 1
+  animal_type: two

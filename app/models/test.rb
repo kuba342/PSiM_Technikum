@@ -1,3 +1,4 @@
 class Test < ApplicationRecord
-  belongs_to :lesson
+  has_many :lessons
+  has_many :student_grades
 end

@@ -2,6 +2,10 @@
 
 one:
   isPresent: false
+  student: one
+  lesson: one
 
 two:
   isPresent: false
+  student: two
+  lesson: two

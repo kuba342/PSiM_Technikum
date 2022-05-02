@@ -1,7 +1,19 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  date: 2022-04-24 19:37:50
+  date: 2022-05-02 15:02:58
+  teacher: one
+  class_of_student: one
+  animal: one
+  test: one
+  classroom: one
+  course: one
 
 two:
-  date: 2022-04-24 19:37:50
+  date: 2022-05-02 15:02:58
+  teacher: two
+  class_of_student: two
+  animal: two
+  test: two
+  classroom: two
+  course: two

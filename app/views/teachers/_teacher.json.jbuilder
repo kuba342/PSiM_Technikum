@@ -1,2 +1,2 @@
-json.extract! teacher, :id, :firstName, :lastName, :created_at, :updated_at
+json.extract! teacher, :id, :firstName, :lastName, :user_id, :created_at, :updated_at
 json.url teacher_url(teacher, format: :json)

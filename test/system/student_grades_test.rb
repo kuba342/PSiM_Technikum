@@ -14,8 +14,12 @@ class StudentGradesTest < ApplicationSystemTestCase
     visit student_grades_url
     click_on "New student grade"
 
+    fill_in "Course", with: @student_grade.course_id
     fill_in "Date", with: @student_grade.date
     fill_in "Grade", with: @student_grade.grade
+    fill_in "Student", with: @student_grade.student_id
+    fill_in "Teacher", with: @student_grade.teacher_id
+    fill_in "Test", with: @student_grade.test_id
     click_on "Create Student grade"
 
     assert_text "Student grade was successfully created"
@@ -26,8 +30,12 @@ class StudentGradesTest < ApplicationSystemTestCase
     visit student_grade_url(@student_grade)
     click_on "Edit this student grade", match: :first
 
+    fill_in "Course", with: @student_grade.course_id
     fill_in "Date", with: @student_grade.date
     fill_in "Grade", with: @student_grade.grade
+    fill_in "Student", with: @student_grade.student_id
+    fill_in "Teacher", with: @student_grade.teacher_id
+    fill_in "Test", with: @student_grade.test_id
     click_on "Update Student grade"
 
     assert_text "Student grade was successfully updated"

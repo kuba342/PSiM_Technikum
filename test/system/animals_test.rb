@@ -14,7 +14,7 @@ class AnimalsTest < ApplicationSystemTestCase
     visit animals_url
     click_on "New animal"
 
-    fill_in "Animaltype", with: @animal.AnimalType_id
+    fill_in "Animal type", with: @animal.animal_type_id
     fill_in "Code", with: @animal.code
     click_on "Create Animal"
 
@@ -26,7 +26,7 @@ class AnimalsTest < ApplicationSystemTestCase
     visit animal_url(@animal)
     click_on "Edit this animal", match: :first
 
-    fill_in "Animaltype", with: @animal.AnimalType_id
+    fill_in "Animal type", with: @animal.animal_type_id
     fill_in "Code", with: @animal.code
     click_on "Update Animal"
 
