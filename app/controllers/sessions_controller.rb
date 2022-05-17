@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       # Git, logujemy
       log_in user
-      redirect_to user
+      redirect_to root_url
     else
       # nie jest git
       render 'new'

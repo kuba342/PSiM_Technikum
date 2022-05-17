@@ -1,26 +1,7 @@
-<h1>Strona główna - Technikum Weterynaryjne</h1>
+<h1>Technikum Weterynaryjne</h1>
 <p>
 Jeśli zostałeś wtajemniczony w istnienie tego projektu - tę stronę powinieneś widzieć
 jako pierwszą.
 </p>
 <h2>Wyświetlam aktualny czas:</h2>
 <%= Time.now %>
-<h2>Dane w bazie</h2>
-<h3>Użytkownicy</h3>
-<ol>
-  <% @users.each do |user| %>
-    <li><%= user.email %> <%= user.login %> <%= user.password %></li>
-  <% end %>
-</ol>
-<h3>Typy zwierząt</h3>
-<ol>
-  <% @animal_types.each do |type| %>
-    <li><%= type.species %> <%= type.group %></li>
-  <% end %>
-</ol>
-<h3>Zwierzęta</h3>
-<ol>
-  <% @animals.each do |animal| %>
-    <li><%= animal.code %></li>
-  <% end %>
-</ol>

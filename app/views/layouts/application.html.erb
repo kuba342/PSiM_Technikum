@@ -16,7 +16,9 @@
       <%= link_to "Wyloguj", logout_path, method: :delete %>
     <% else %>
       <%= link_to "Zaloguj", login_path %>
+      <%= link_to "Strona główna", root_path %>
     <% end %>
+    <% if logged_in? %>
     <ol>
       <li><%= link_to "Strona główna", root_path %></li>
       <li><%= link_to "Użytkownicy", users_path %></li>
@@ -32,6 +34,7 @@
       <li><%= link_to "Kody zwierząt", animals_path %></li>
       <li><%= link_to "Klasy w szkole", classrooms_path %></li>
     </ol>
+    <% end %>
     <%= yield %>
   </body>
 </html>
