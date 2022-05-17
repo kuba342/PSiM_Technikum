@@ -5,3 +5,23 @@ jako pierwszą.
 </p>
 <h2>Wyświetlam aktualny czas:</h2>
 <%= Time.now %>
+<% if logged_in? %>
+<h2>Typy zwierząt w bazie</h2>
+  <ol>
+    <% @animal_types.each do |type| %>
+      <li><%= "Gatunek: " + type.species%>
+          <br>
+          <%= "Grupa: " + type.group %></li>
+    <% end %>
+  </ol>
+<h2>Zwierzęta w bazie</h2>
+  <ol>
+    <% @animals.each do |animal| %>
+      <li><%= animal.code %>
+          <br>
+          <%= "Gatunek: " + animal.animal_type.species%>
+          <br>
+          <%= "Grupa: " + animal.animal_type.group %></li>
+    <% end %>
+  </ol>
+<% end %>

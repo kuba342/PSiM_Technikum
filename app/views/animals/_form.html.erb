@@ -18,7 +18,7 @@
 
   <div>
     <%= form.label :animal_type_id, style: "display: block" %>
-    <%= form.text_field :animal_type_id %>
+    <%= form.collection_select(:animal_type_id, AnimalType.order(:species), :id, :species)%>
   </div>
 
   <div>
