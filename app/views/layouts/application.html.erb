@@ -17,6 +17,21 @@
     <% else %>
       <%= link_to "Zaloguj", login_path %>
     <% end %>
+    <ol>
+      <li><%= link_to "Strona główna", root_path %></li>
+      <li><%= link_to "Użytkownicy", users_path %></li>
+      <li><%= link_to "Nauczyciele", teachers_path %></li>
+      <li><%= link_to "Uczniowie", students_path %></li>
+      <li><%= link_to "Klasy", class_of_students_path %></li>
+      <li><%= link_to "Kursy", courses_path %></li>
+      <li><%= link_to "Testy/sprawdziany", tests_path %></li>
+      <li><%= link_to "Lekcje", lessons_path %></li>
+      <li><%= link_to "Obecności", presences_path %></li>
+      <li><%= link_to "Oceny", student_grades_path %></li>
+      <li><%= link_to "Typy zwierząt", animal_types_path %></li>
+      <li><%= link_to "Kody zwierząt", animals_path %></li>
+      <li><%= link_to "Klasy w szkole", classrooms_path %></li>
+    </ol>
     <%= yield %>
   </body>
 </html>
