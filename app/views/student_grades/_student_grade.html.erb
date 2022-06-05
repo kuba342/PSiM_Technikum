@@ -11,22 +11,22 @@
 
   <p>
     <strong>Teacher:</strong>
-    <%= student_grade.teacher_id %>
+    <%= student_grade.teacher.name %>
   </p>
 
   <p>
     <strong>Student:</strong>
-    <%= student_grade.student_id %>
+    <%= student_grade.student.student_infor %>
   </p>
 
   <p>
     <strong>Course:</strong>
-    <%= student_grade.course_id %>
+    <%= student_grade.course.name %>
   </p>
 
   <p>
     <strong>Test:</strong>
-    <%= student_grade.test_id %>
+    <%= student_grade.test.test_infor %>
   </p>
 
 </div>

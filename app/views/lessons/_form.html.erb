@@ -18,34 +18,35 @@
 
   <div>
     <%= form.label :teacher_id, style: "display: block" %>
-    <%= form.text_field :teacher_id %>
+    <%= form.collection_select(:teacher_id, Teacher.order(:lastName), :id, :name) %>
   </div>
 
   <div>
     <%= form.label :class_of_student_id, style: "display: block" %>
-    <%= form.text_field :class_of_student_id %>
+    <%= form.collection_select(:class_of_student_id, ClassOfStudent.order(:symbol), :id, :symbol)%>
   </div>
 
   <div>
     <%= form.label :animal_id, style: "display: block" %>
-    <%= form.text_field :animal_id %>
+    <%= form.collection_select(:animal_id, Animal.order(:code), :id, :animal_infor)%>
   </div>
 
   <div>
     <%= form.label :test_id, style: "display: block" %>
-    <%= form.text_field :test_id %>
+    <%= form.collection_select(:test_id, Test.order(:name), :id, :name)%>
   </div>
 
   <div>
     <%= form.label :classroom_id, style: "display: block" %>
-    <%= form.text_field :classroom_id %>
+    <%= form.collection_select(:classroom_id, Classroom.order(:number), :id, :number)%>
   </div>
 
   <div>
     <%= form.label :course_id, style: "display: block" %>
-    <%= form.text_field :course_id %>
+    <%= form.collection_select(:course_id, Course.order(:name), :id, :name)%>
   </div>
 
+  <br>
   <div>
     <%= form.submit %>
   </div>

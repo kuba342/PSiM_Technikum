@@ -23,12 +23,12 @@
 
   <div>
     <%= form.label :user_id, style: "display: block" %>
-    <%= form.text_field :user_id %>
+    <%= form.collection_select(:user_id, User.order(:login), :id, :login) %>
   </div>
 
   <div>
     <%= form.label :class_of_student_id, style: "display: block" %>
-    <%= form.text_field :class_of_student_id %>
+    <%= form.collection_select(:class_of_student_id, ClassOfStudent.order(:symbol), :id, :symbol) %>
   </div>
 
   <div>

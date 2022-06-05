@@ -11,7 +11,12 @@
 
   <p>
     <strong>Teacher:</strong>
-    <%= class_of_student.teacher_id %>
+    <br>
+    <%= "Id: " + class_of_student.teacher_id.to_s %>
+    <br>
+    <%= "Last name: " + class_of_student.teacher.lastName %>
+    <br>
+    <%= "First name: " + class_of_student.teacher.firstName %>
   </p>
 
 </div>

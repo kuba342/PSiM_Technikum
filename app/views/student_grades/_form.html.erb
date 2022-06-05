@@ -13,7 +13,7 @@
 
   <div>
     <%= form.label :grade, style: "display: block" %>
-    <%= form.text_field :grade %>
+    <%= form.select :grade, [1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0]%>
   </div>
 
   <div>
@@ -23,24 +23,25 @@
 
   <div>
     <%= form.label :teacher_id, style: "display: block" %>
-    <%= form.text_field :teacher_id %>
+    <%= form.collection_select(:teacher_id, Teacher.order(:lastname), :id, :name) %>
   </div>
 
   <div>
     <%= form.label :student_id, style: "display: block" %>
-    <%= form.text_field :student_id %>
+    <%= form.collection_select(:student_id, Student.order(:lastname), :id, :student_infor) %>
   </div>
 
   <div>
     <%= form.label :course_id, style: "display: block" %>
-    <%= form.text_field :course_id %>
+    <%= form.collection_select(:course_id, Course.order(:name), :id, :name) %>
   </div>
 
   <div>
     <%= form.label :test_id, style: "display: block" %>
-    <%= form.text_field :test_id %>
+    <%= form.collection_select(:test_id, Test.order(:name), :id, :test_infor) %>
   </div>
 
+  <br>
   <div>
     <%= form.submit %>
   </div>

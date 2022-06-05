@@ -11,12 +11,15 @@
 
   <p>
     <strong>User:</strong>
-    <%= student.user_id %>
+    <br>
+    <%= "Id: " + student.user_id.to_s %>
+    <br>
+    <%= "Login: " + student.user.login %>
   </p>
 
   <p>
     <strong>Class of student:</strong>
-    <%= student.class_of_student_id %>
+    <%= student.class_of_student.symbol %>
   </p>
 
 </div>
