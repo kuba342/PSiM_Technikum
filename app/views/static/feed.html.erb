@@ -1,0 +1,10 @@
+<h1>Zwierzęta w bazie</h1>
+<ol>
+  <% @animals.each do |animal| %>
+    <li><%= animal.code %>
+        <br>
+        <%= "Gatunek: " + animal.animal_type.species%>
+        <br>
+        <%= "Grupa: " + animal.animal_type.group %></li>
+  <% end %>
+</ol>
