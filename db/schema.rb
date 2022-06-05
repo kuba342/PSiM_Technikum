@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_03_161238) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_05_150413) do
   create_table "animal_types", force: :cascade do |t|
     t.string "species"
     t.string "group"
@@ -124,7 +124,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_03_161238) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "password_digest"
+    t.string "token"
     t.index ["login"], name: "index_users_on_login", unique: true
+    t.index ["token"], name: "index_users_on_token"
   end
 
   add_foreign_key "animals", "animal_types"
