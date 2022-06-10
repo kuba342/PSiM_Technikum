@@ -1,12 +1,23 @@
 class AnimalTypesController < ApplicationController
+  #To trzeba dodać do każdego kontrolera
+  swagger_controller :animal_types, 'Animal Types'
+
   before_action :set_animal_type, only: %i[ show edit update destroy ]
 
   # GET /animal_types or /animal_types.json
+  swagger_api :index do
+    summary 'Returns all Animal Types'
+    notes 'Each object from database'
+  end
   def index
     @animal_types = AnimalType.all
   end
 
   # GET /animal_types/1 or /animal_types/1.json
+  swagger_api :show do
+    summary 'Returns concrete Animal Type'
+    notes 'Returns by id'
+  end
   def show
   end
 

@@ -61,6 +61,8 @@ group :development do
 
   gem 'railroady'
 
+  gem 'swagger-docs'
+
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
 
