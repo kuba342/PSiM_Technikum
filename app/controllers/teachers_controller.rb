@@ -1,25 +1,51 @@
 class TeachersController < ApplicationController
+
+  skip_before_action :verify_authenticity_token
+  swagger_controller :teachers, 'Teachers'
+
   before_action :set_teacher, only: %i[ show edit update destroy ]
 
   # GET /teachers or /teachers.json
+  swagger_api :index do
+    summary 'Returns all teachers'
+    notes 'Each object from database'
+  end
   def index
     @teachers = Teacher.all
   end
 
   # GET /teachers/1 or /teachers/1.json
+  swagger_api :show do
+    summary 'Returns concrete teacher'
+    param :path, :id, :integer, :required, "Teacher id"
+    notes 'Returns by id'
+  end
   def show
   end
 
   # GET /teachers/new
+  swagger_api :new do
+    summary 'Returns html form to create new teacher'
+  end
   def new
     @teacher = Teacher.new
   end
 
   # GET /teachers/1/edit
+  swagger_api :edit do
+    summary 'Returns html form to edit teacher by id'
+    param :path, :id, :integer, :required, "animal id"
+  end
   def edit
   end
 
   # POST /teachers or /teachers.json
+  swagger_api :create do
+    summary 'Create a teacher'
+    param :form, "teacher[firstName]", :string, :required, "teacher's first name"
+    param :form, "teacher[lastName]", :string, :required, "teacher's last name"
+    param :form, "teacher[user_id]", :integer, :required, "User id"
+  end
   def create
     @teacher = Teacher.new(teacher_params)
 
@@ -35,6 +61,13 @@ class TeachersController < ApplicationController
   end
 
   # PATCH/PUT /teachers/1 or /teachers/1.json
+  swagger_api :update do
+    summary 'Update a teacher'
+    param :path, :id, :integer, :required, "teacher id"
+    param :form, "teacher[firstName]", :string, :required, "teacher's first name"
+    param :form, "teacher[lastName]", :string, :required, "teacher's last name"
+    param :form, "teacher[user_id]", :integer, :required, "User id"
+  end
   def update
     respond_to do |format|
       if @teacher.update(teacher_params)
@@ -48,6 +81,10 @@ class TeachersController < ApplicationController
   end
 
   # DELETE /teachers/1 or /teachers/1.json
+  swagger_api :destroy do
+    summary 'Destroys concrete teacher by id'
+    param :path, :id, :integer, :required, "teacher id"
+  end
   def destroy
     @teacher.destroy
 

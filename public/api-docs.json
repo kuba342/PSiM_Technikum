@@ -4,6 +4,10 @@
   "basePath": "http://localhost:3000",
   "apis": [
     {
+      "path": "/teachers.{format}",
+      "description": "Teachers"
+    },
+    {
       "path": "/users.{format}",
       "description": "Users"
     },
