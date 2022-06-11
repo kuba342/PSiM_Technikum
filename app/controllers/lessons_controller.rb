@@ -1,25 +1,55 @@
 class LessonsController < ApplicationController
+
+  skip_before_action :verify_authenticity_token
+  swagger_controller :lessons, 'Lessons'
+
   before_action :set_lesson, only: %i[ show edit update destroy ]
 
   # GET /lessons or /lessons.json
+  swagger_api :index do
+    summary 'Returns all lessons'
+    notes 'Each object from database'
+  end
   def index
     @lessons = Lesson.all
   end
 
   # GET /lessons/1 or /lessons/1.json
+  swagger_api :show do
+    summary 'Returns concrete lesson'
+    param :path, :id, :integer, :required, "lesson id"
+    notes 'Returns by id'
+  end
   def show
   end
 
   # GET /lessons/new
+  swagger_api :new do
+    summary 'Returns html form to create new lesson'
+  end
   def new
     @lesson = Lesson.new
   end
 
   # GET /lessons/1/edit
+  swagger_api :edit do
+    summary 'Returns html form to edit lesson by id'
+    param :path, :id, :integer, :required, "lesson id"
+  end
   def edit
   end
 
   # POST /lessons or /lessons.json
+  swagger_api :create do
+    summary 'Create a lesson'
+    param :form, "lesson[date]", :datetime, :required, "lesson date"
+    param :form, "lesson[course_id]", :integer, :required, "course id"
+    param :form, "lesson[test_id]", :integer, :required, "test id"
+    param :form, "lesson[class_of_student_id]", :integer, :required, "class of students id"
+    param :form, "lesson[teacher_id]", :integer, :required, "teacher id"
+    param :form, "lesson[animal_id]", :integer, :required, "animal id"
+    param :form, "lesson[classroom_id]", :integer, :required, "classroom id"
+  end
   def create
     @lesson = Lesson.new(lesson_params)
 
@@ -35,6 +65,17 @@ class LessonsController < ApplicationController
   end
 
   # PATCH/PUT /lessons/1 or /lessons/1.json
+  swagger_api :update do
+    summary 'Update a lesson'
+    param :path, :id, :integer, :required, "lesson id"
+    param :form, "lesson[date]", :datetime, :required, "lesson date"
+    param :form, "lesson[course_id]", :integer, :required, "course id"
+    param :form, "lesson[test_id]", :integer, :required, "test id"
+    param :form, "lesson[class_of_student_id]", :integer, :required, "class of students id"
+    param :form, "lesson[teacher_id]", :integer, :required, "teacher id"
+    param :form, "lesson[animal_id]", :integer, :required, "animal id"
+    param :form, "lesson[classroom_id]", :integer, :required, "classroom id"
+  end
   def update
     respond_to do |format|
       if @lesson.update(lesson_params)
@@ -48,6 +89,10 @@ class LessonsController < ApplicationController
   end
 
   # DELETE /lessons/1 or /lessons/1.json
+  swagger_api :destroy do
+    summary 'Destroys concrete lesson by id'
+    param :path, :id, :integer, :required, "lesson id"
+  end
   def destroy
     @lesson.destroy
 

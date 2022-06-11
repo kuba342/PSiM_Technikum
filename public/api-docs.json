@@ -4,6 +4,10 @@
   "basePath": "http://localhost:3000",
   "apis": [
     {
+      "path": "/lessons.{format}",
+      "description": "Lessons"
+    },
+    {
       "path": "/courses.{format}",
       "description": "Courses"
     },
