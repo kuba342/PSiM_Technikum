@@ -8,20 +8,9 @@
       "path": "/animal_types",
       "operations": [
         {
-          "summary": "Returns all Animal Types",
+          "summary": "Returns all",
           "notes": "Each object from database",
           "nickname": "AnimalTypes#index",
-          "method": "get"
-        }
-      ]
-    },
-    {
-      "path": "/animal_types/{id}",
-      "operations": [
-        {
-          "summary": "Returns concrete Animal Type",
-          "notes": "Returns by id",
-          "nickname": "AnimalTypes#show",
           "method": "get"
         }
       ]

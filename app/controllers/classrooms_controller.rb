@@ -1,7 +1,13 @@
 class ClassroomsController < ApplicationController
+  swagger_controller :classrooms, 'Classrooms'
+
   before_action :set_classroom, only: %i[ show edit update destroy ]
 
   # GET /classrooms or /classrooms.json
+  swagger_api :index do
+    summary 'Returns all Classrooms'
+    notes 'Each object from database'
+  end
   def index
     @classrooms = Classroom.all
   end
