@@ -8,6 +8,10 @@
       "description": "Courses"
     },
     {
+      "path": "/class_of_students.{format}",
+      "description": "Class of students"
+    },
+    {
       "path": "/teachers.{format}",
       "description": "Teachers"
     },
