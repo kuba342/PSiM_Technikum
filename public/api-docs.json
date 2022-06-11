@@ -8,6 +8,10 @@
       "description": "Classrooms"
     },
     {
+      "path": "/animals.{format}",
+      "description": "Animals"
+    },
+    {
       "path": "/animal_types.{format}",
       "description": "Animal Types"
     }
