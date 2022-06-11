@@ -6,7 +6,7 @@ class AnimalTypesController < ApplicationController
 
   # GET /animal_types or /animal_types.json
   swagger_api :index do
-    summary 'Returns all'
+    summary 'Returns all Animal Types'
     notes 'Each object from database'
   end
   def index
@@ -14,10 +14,11 @@ class AnimalTypesController < ApplicationController
   end
 
   # GET /animal_types/1 or /animal_types/1.json
-  #swagger_api :show do
-    #summary 'Returns concrete'
-    #notes 'Returns by id'
-  #end
+  swagger_api :show do
+    summary 'Returns concrete'
+    param :path, :id, :integer, :required, "AnimalType id"
+    notes 'Returns by id'
+  end
   def show
   end
 
