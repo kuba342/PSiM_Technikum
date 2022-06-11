@@ -1,0 +1,161 @@
+{
+  "apiVersion": "1.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://localhost:3000",
+  "resourcePath": "presences",
+  "apis": [
+    {
+      "path": "/presences",
+      "operations": [
+        {
+          "summary": "Returns all presences",
+          "notes": "Each object from database",
+          "nickname": "Presences#index",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/presences",
+      "operations": [
+        {
+          "summary": "Create a presence",
+          "parameters": [
+            {
+              "paramType": "form",
+              "name": "presence[isPresent]",
+              "type": "boolean",
+              "description": "is present?",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "presence[lesson_id]",
+              "type": "integer",
+              "description": "lesson id",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "presence[student]",
+              "type": "integer",
+              "description": "student id",
+              "required": true
+            }
+          ],
+          "nickname": "Presences#create",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "path": "/presences/new",
+      "operations": [
+        {
+          "summary": "Returns html form to create new presence",
+          "nickname": "Presences#new",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/presences/{id}/edit",
+      "operations": [
+        {
+          "summary": "Returns html form to edit presence by id",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "presence id",
+              "required": true
+            }
+          ],
+          "nickname": "Presences#edit",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/presences/{id}",
+      "operations": [
+        {
+          "summary": "Returns concrete presence",
+          "notes": "Returns by id",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Presence id",
+              "required": true
+            }
+          ],
+          "nickname": "Presences#show",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/presences/{id}",
+      "operations": [
+        {
+          "summary": "Update a presence",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "presence id",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "presence[isPresent]",
+              "type": "boolean",
+              "description": "is present?",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "presence[lesson_id]",
+              "type": "integer",
+              "description": "lesson id",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "presence[student]",
+              "type": "integer",
+              "description": "student id",
+              "required": true
+            }
+          ],
+          "nickname": "Presences#update",
+          "method": "patch"
+        }
+      ]
+    },
+    {
+      "path": "/presences/{id}",
+      "operations": [
+        {
+          "summary": "Destroys concrete presence by id",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "presence id",
+              "required": true
+            }
+          ],
+          "nickname": "Presences#destroy",
+          "method": "delete"
+        }
+      ]
+    }
+  ],
+  "authorizations": null
+}
