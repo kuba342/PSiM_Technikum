@@ -8,6 +8,10 @@
       "description": "Lessons"
     },
     {
+      "path": "/student_grades.{format}",
+      "description": "student grades"
+    },
+    {
       "path": "/courses.{format}",
       "description": "Courses"
     },

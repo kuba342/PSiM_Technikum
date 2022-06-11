@@ -1,0 +1,203 @@
+{
+  "apiVersion": "1.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://localhost:3000",
+  "resourcePath": "student_grades",
+  "apis": [
+    {
+      "path": "/student_grades",
+      "operations": [
+        {
+          "summary": "Returns all student grades",
+          "notes": "Each object from database",
+          "nickname": "StudentGrades#index",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/student_grades",
+      "operations": [
+        {
+          "summary": "Create a student grade",
+          "parameters": [
+            {
+              "paramType": "form",
+              "name": "student_grade[date]",
+              "type": "datetime",
+              "description": "date",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "student_grade[grade]",
+              "type": "float",
+              "description": "grade",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "student_grade[student_id]",
+              "type": "integer",
+              "description": "student id",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "student_grade[test_id]",
+              "type": "integer",
+              "description": "test id",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "student_grade[course_id]",
+              "type": "integer",
+              "description": "course id",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "student_grade[teacher_id]",
+              "type": "integer",
+              "description": "teacher id",
+              "required": true
+            }
+          ],
+          "nickname": "StudentGrades#create",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "path": "/student_grades/new",
+      "operations": [
+        {
+          "summary": "Returns html form to create new student grade",
+          "nickname": "StudentGrades#new",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/student_grades/{id}/edit",
+      "operations": [
+        {
+          "summary": "Returns html form to edit grade by id",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "student grade id",
+              "required": true
+            }
+          ],
+          "nickname": "StudentGrades#edit",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/student_grades/{id}",
+      "operations": [
+        {
+          "summary": "Returns concrete grade",
+          "notes": "Returns by id",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "student grade id",
+              "required": true
+            }
+          ],
+          "nickname": "StudentGrades#show",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/student_grades/{id}",
+      "operations": [
+        {
+          "summary": "Update a student grade",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "student grade id",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "student_grade[date]",
+              "type": "datetime",
+              "description": "date",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "student_grade[grade]",
+              "type": "float",
+              "description": "grade",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "student_grade[student_id]",
+              "type": "integer",
+              "description": "student id",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "student_grade[test_id]",
+              "type": "integer",
+              "description": "test id",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "student_grade[course_id]",
+              "type": "integer",
+              "description": "course id",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "student_grade[teacher_id]",
+              "type": "integer",
+              "description": "teacher id",
+              "required": true
+            }
+          ],
+          "nickname": "StudentGrades#update",
+          "method": "patch"
+        }
+      ]
+    },
+    {
+      "path": "/student_grades/{id}",
+      "operations": [
+        {
+          "summary": "Destroys concrete grade by id",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "grade id",
+              "required": true
+            }
+          ],
+          "nickname": "StudentGrades#destroy",
+          "method": "delete"
+        }
+      ]
+    }
+  ],
+  "authorizations": null
+}
