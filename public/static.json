@@ -21,6 +21,15 @@
         {
           "summary": "Returns all animal types and animals",
           "notes": "Each object from database",
+          "parameters": [
+            {
+              "paramType": "header",
+              "name": "Authorization",
+              "type": "string",
+              "description": "Authentication token",
+              "required": true
+            }
+          ],
           "nickname": "Static#feed",
           "method": "get"
         }

@@ -5,7 +5,11 @@
   "apis": [
     {
       "path": "/static.{format}",
-      "description": "Additional operations"
+      "description": "Static"
+    },
+    {
+      "path": "/sessions.{format}",
+      "description": "Authentication"
     },
     {
       "path": "/presences.{format}",
