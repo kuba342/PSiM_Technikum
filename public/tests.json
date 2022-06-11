@@ -1,0 +1,147 @@
+{
+  "apiVersion": "1.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://localhost:3000",
+  "resourcePath": "tests",
+  "apis": [
+    {
+      "path": "/tests",
+      "operations": [
+        {
+          "summary": "Returns all tests",
+          "notes": "Each object from database",
+          "nickname": "Tests#index",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/tests",
+      "operations": [
+        {
+          "summary": "Create a test",
+          "parameters": [
+            {
+              "paramType": "form",
+              "name": "test[name]",
+              "type": "string",
+              "description": "name of the test",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "test[description]",
+              "type": "text",
+              "description": "description",
+              "required": true
+            }
+          ],
+          "nickname": "Tests#create",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "path": "/tests/new",
+      "operations": [
+        {
+          "summary": "Returns html form to create new test",
+          "nickname": "Tests#new",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/tests/{id}/edit",
+      "operations": [
+        {
+          "summary": "Returns html form to edit test by id",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "test id",
+              "required": true
+            }
+          ],
+          "nickname": "Tests#edit",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/tests/{id}",
+      "operations": [
+        {
+          "summary": "Returns concrete test",
+          "notes": "Returns by id",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Test id",
+              "required": true
+            }
+          ],
+          "nickname": "Tests#show",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/tests/{id}",
+      "operations": [
+        {
+          "summary": "Update a test",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "test id",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "test[name]",
+              "type": "string",
+              "description": "name of the test",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "test[description]",
+              "type": "text",
+              "description": "description",
+              "required": true
+            }
+          ],
+          "nickname": "Tests#update",
+          "method": "patch"
+        }
+      ]
+    },
+    {
+      "path": "/tests/{id}",
+      "operations": [
+        {
+          "summary": "Destroys concrete test by id",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "test id",
+              "required": true
+            }
+          ],
+          "nickname": "Tests#destroy",
+          "method": "delete"
+        }
+      ]
+    }
+  ],
+  "authorizations": null
+}

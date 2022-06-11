@@ -12,6 +12,10 @@
       "description": "Teachers"
     },
     {
+      "path": "/tests.{format}",
+      "description": "Tests"
+    },
+    {
       "path": "/users.{format}",
       "description": "Users"
     },
