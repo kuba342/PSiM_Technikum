@@ -8,9 +8,64 @@
       "path": "/animal_types",
       "operations": [
         {
-          "summary": "Returns all Animal Types",
+          "summary": "Returns all animal types",
           "notes": "Each object from database",
           "nickname": "AnimalTypes#index",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/animal_types",
+      "operations": [
+        {
+          "summary": "Create an animal type",
+          "parameters": [
+            {
+              "paramType": "form",
+              "name": "animal_type[group]",
+              "type": "string",
+              "description": "group of type",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "animal_type[species]",
+              "type": "string",
+              "description": "species of animal",
+              "required": true
+            }
+          ],
+          "nickname": "AnimalTypes#create",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "path": "/animal_types/new",
+      "operations": [
+        {
+          "summary": "Returns html form to create new animal type",
+          "nickname": "AnimalTypes#new",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/animal_types/{id}/edit",
+      "operations": [
+        {
+          "summary": "Returns html form to edit animal type by id",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "animal_type id",
+              "required": true
+            }
+          ],
+          "nickname": "AnimalTypes#edit",
           "method": "get"
         }
       ]
@@ -19,7 +74,7 @@
       "path": "/animal_types/{id}",
       "operations": [
         {
-          "summary": "Returns concrete",
+          "summary": "Returns concrete animal type",
           "notes": "Returns by id",
           "parameters": [
             {
@@ -32,6 +87,58 @@
           ],
           "nickname": "AnimalTypes#show",
           "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/animal_types/{id}",
+      "operations": [
+        {
+          "summary": "Update an animal type",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "animal_type id",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "animal_type[group]",
+              "type": "string",
+              "description": "group of type",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "animal_type[species]",
+              "type": "string",
+              "description": "species of animal",
+              "required": true
+            }
+          ],
+          "nickname": "AnimalTypes#update",
+          "method": "patch"
+        }
+      ]
+    },
+    {
+      "path": "/animal_types/{id}",
+      "operations": [
+        {
+          "summary": "Destroys concrete animal type by id",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "animal_type id",
+              "required": true
+            }
+          ],
+          "nickname": "AnimalTypes#destroy",
+          "method": "delete"
         }
       ]
     }

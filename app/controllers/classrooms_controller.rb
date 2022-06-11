@@ -1,11 +1,12 @@
 class ClassroomsController < ApplicationController
+  skip_before_action :verify_authenticity_token
   swagger_controller :classrooms, 'Classrooms'
 
   before_action :set_classroom, only: %i[ show edit update destroy ]
 
   # GET /classrooms or /classrooms.json
   swagger_api :index do
-    summary 'Returns all Classrooms'
+    summary 'Returns all classrooms'
     notes 'Each object from database'
   end
   def index
@@ -13,19 +14,35 @@ class ClassroomsController < ApplicationController
   end
 
   # GET /classrooms/1 or /classrooms/1.json
+  swagger_api :show do
+    summary 'Returns concrete classroom'
+    param :path, :id, :integer, :required, "classroom id"
+    notes 'Returns by id'
+  end
   def show
   end
 
   # GET /classrooms/new
+  swagger_api :new do
+    summary 'Returns html form to create new classroom'
+  end
   def new
     @classroom = Classroom.new
   end
 
   # GET /classrooms/1/edit
+  swagger_api :edit do
+    summary 'Returns html form to edit classroom by id'
+    param :path, :id, :integer, :required, "classroom id"
+  end
   def edit
   end
 
   # POST /classrooms or /classrooms.json
+  swagger_api :create do
+    summary 'Create a classroom'
+    param :form, "classroom[number]", :integer, :required, "number of classroom"
+  end
   def create
     @classroom = Classroom.new(classroom_params)
 
@@ -41,6 +58,11 @@ class ClassroomsController < ApplicationController
   end
 
   # PATCH/PUT /classrooms/1 or /classrooms/1.json
+  swagger_api :update do
+    summary 'Update a classroom'
+    param :path, :id, :integer, :required, "classroom id"
+    param :form, "classroom[number]", :number, :required, "number of classroom"
+  end
   def update
     respond_to do |format|
       if @classroom.update(classroom_params)
@@ -54,6 +76,10 @@ class ClassroomsController < ApplicationController
   end
 
   # DELETE /classrooms/1 or /classrooms/1.json
+  swagger_api :destroy do
+    summary 'Destroys concrete classroom by id'
+    param :path, :id, :integer, :required, "classroom id"
+  end
   def destroy
     @classroom.destroy
 

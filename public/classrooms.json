@@ -8,10 +8,123 @@
       "path": "/classrooms",
       "operations": [
         {
-          "summary": "Returns all Classrooms",
+          "summary": "Returns all classrooms",
           "notes": "Each object from database",
           "nickname": "Classrooms#index",
           "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/classrooms",
+      "operations": [
+        {
+          "summary": "Create a classroom",
+          "parameters": [
+            {
+              "paramType": "form",
+              "name": "classroom[number]",
+              "type": "integer",
+              "description": "number of classroom",
+              "required": true
+            }
+          ],
+          "nickname": "Classrooms#create",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "path": "/classrooms/new",
+      "operations": [
+        {
+          "summary": "Returns html form to create new classroom",
+          "nickname": "Classrooms#new",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/classrooms/{id}/edit",
+      "operations": [
+        {
+          "summary": "Returns html form to edit classroom by id",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "classroom id",
+              "required": true
+            }
+          ],
+          "nickname": "Classrooms#edit",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/classrooms/{id}",
+      "operations": [
+        {
+          "summary": "Returns concrete classroom",
+          "notes": "Returns by id",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "classroom id",
+              "required": true
+            }
+          ],
+          "nickname": "Classrooms#show",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/classrooms/{id}",
+      "operations": [
+        {
+          "summary": "Update a classroom",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "classroom id",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "classroom[number]",
+              "type": "number",
+              "description": "number of classroom",
+              "required": true
+            }
+          ],
+          "nickname": "Classrooms#update",
+          "method": "patch"
+        }
+      ]
+    },
+    {
+      "path": "/classrooms/{id}",
+      "operations": [
+        {
+          "summary": "Destroys concrete classroom by id",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "classroom id",
+              "required": true
+            }
+          ],
+          "nickname": "Classrooms#destroy",
+          "method": "delete"
         }
       ]
     }
