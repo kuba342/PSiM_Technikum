@@ -1,0 +1,32 @@
+[
+    {
+        "FirstName": "Elżbieta",
+        "LastName" : "Michno",
+        "UserID": 1
+    },
+    {
+        "FirstName": "Magalena",
+        "LastName" : "Chojka",
+        "UserID": 2
+    },
+    {
+        "FirstName": "Wojtek",
+        "LastName" : "Denkiewicz",
+        "UserID":  3
+    },
+    {
+        "FirstName": "Mariola",
+        "LastName" : "Wróbel",
+        "UserID": 4
+    },
+    {
+        "FirstName": "Robert",
+        "LastName" : "Wróbel",
+        "UserID": 5
+    },
+    {
+        "FirstName": "Marta",
+        "LastName" : "Podkówka",
+        "UserID": 6
+    }
+]

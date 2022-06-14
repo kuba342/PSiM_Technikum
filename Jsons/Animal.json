@@ -1,0 +1,43 @@
+[
+    {
+        "Code": "cat-005-asd",
+        "AnimalType" : 15
+    },
+    {
+        "Code": "Felix",
+        "AnimalType" : 17
+    },
+    {
+        "Code": "Osioł-007",
+        "AnimalType" : 12
+    },
+    {
+        "Code": "Beta",
+        "AnimalType" : 15
+    },
+    {
+        "Code": "Szwadron",
+        "AnimalType" : 5
+    },
+    {
+        "Code": "Super",
+        "AnimalType" : 14
+    },
+    {
+        "Code": "Cool",
+        "AnimalType" : 5
+    },
+    {
+        "Code": "Komando",
+        "AnimalType" : 3
+    },
+    {
+        "Code": "Wilków",
+        "AnimalType" : 2
+    },
+    {
+        "Code": "alfa",
+        "AnimalType" : 1
+    }
+
+]

@@ -1,0 +1,23 @@
+[
+    {
+        "Species": "Kot",
+        "Class": "3B"
+    },
+    {
+        "Species": "Pies",
+        "Class": "Weterynaria zwierząt domowych"
+    },
+    {
+        "Species": "Yellow Birb",
+        "Class": "Weterynaria zwierząt egzotycznych"
+    },
+    {
+        "Species": "Krowa",
+        "Class": "Weterynaria zwierząt gospodarczych"
+    },
+    {
+        "Species": "Żółw",
+        "Class": "2A"
+    }
+    
+]

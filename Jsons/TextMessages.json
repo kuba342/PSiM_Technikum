@@ -1,0 +1,31 @@
+[
+    {
+        "Message" : "Proszę usprawiedliwić nieobecność na zajęciach dnia 2022-03-10",
+        "Topic": "Nieobecność",
+        "UserID1" : 4545,
+        "UserID2": 7
+
+    },
+    {
+        "Message" : "Etap okręgowy Olimpiady fizycznej obędzie się 2022-04-06. Proszę przyjść w stroju galowym.",
+        "Topic": "Olimpiada Fizyuczna",
+        "UserID1" : 2256,
+        "UserID2": 249438
+
+    },
+    {
+        "Message" : "Poprawa sprawdzianu obywa się zawsze tydzień po pierwszym terminie",
+        "Topic": "Poprawa sprawdzianu",
+        "UserID1" : 1212,
+        "UserID2": 256487
+
+    },
+    {
+        "Message" : "W NIEDZIELĘ OTWARTE W NIEDZIELĘ OTWARTE W NIEDZIELĘ OTWARTE W NIEDZIELĘ OTWARTE W NIEDZIELĘ OTWARTE W NIEDZIELĘ OTWARTE W NIEDZIELĘ OTWARTE W NIEDZIELĘ OTWARTE W NIEDZIELĘ OTWARTE W NIEDZIELĘ OTWARTE W NIEDZIELĘ OTWARTE W NIEDZIELĘ OTWARTE W NIEDZIELĘ OTWARTE W NIEDZIELĘ OTWARTE ",
+        "Topic": "Żabka",
+        "UserID1" : 2137,
+        "UserID2": 265455
+
+    }
+
+]

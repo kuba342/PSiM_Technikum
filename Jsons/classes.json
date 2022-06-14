@@ -1,0 +1,43 @@
+[
+    {
+        "Date": "2022-03-10",
+        "TeacherID": 3,
+        "ClassID": 127,
+        "AnimalID": 69,
+        "TestID": 2137,
+        "ClassroomID": 15
+    },
+    {
+        "Date": "2022-03-14",
+        "TeacherID": 5,
+        "ClassID": 131,
+        "AnimalID": null,
+        "TestID": 1515,
+        "ClassroomID": 10
+    },
+    {
+        "Date": "2022-03-16",
+        "TeacherID": 4,
+        "ClassID": 122,
+        "AnimalID": 15,
+        "TestID": 3215,
+        "ClassroomID": 8
+    },
+    {
+        "Date": "2022-03-17",
+        "TeacherID": 2,
+        "ClassID": 129,
+        "AnimalID": 58,
+        "TestID": 4585,
+        "ClassroomID": 6
+    },
+    {
+        "Date": "2022-04-10",
+        "TeacherID": 1,
+        "ClassID": 125,
+        "AnimalID": 68,
+        "TestID": null,
+        "ClassroomID": 14
+    }
+
+]

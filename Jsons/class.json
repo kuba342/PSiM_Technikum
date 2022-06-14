@@ -1,0 +1,78 @@
+[
+    {
+        "YearOfStart": 2019,
+        "Symbol": "1A",
+        "TeacherID": 5
+    },
+    {
+        "YearOfStart": 2019,
+        "Symbol": "2D",
+        "TeacherID": 8
+    },
+    {
+        "YearOfStart": 2019,
+        "Symbol": "3A",
+        "TeacherID": 9
+    },
+    {
+        "YearOfStart": 2019,
+        "Symbol": "1C",
+        "TeacherID": 4
+    },
+    {
+        "YearOfStart": 2019,
+        "Symbol": "2B",
+        "TeacherID": 3
+    },
+    {
+        "YearOfStart": 2018,
+        "Symbol": "1D",
+        "TeacherID": 5
+    },
+    {
+        "YearOfStart": 2018,
+        "Symbol": "2G",
+        "TeacherID": 8
+    },
+    {
+        "YearOfStart": 2018,
+        "Symbol": "3D",
+        "TeacherID": 9
+    },
+    {
+        "YearOfStart": 2018,
+        "Symbol": "4A",
+        "TeacherID": 4
+    },
+    {
+        "YearOfStart": 2018,
+        "Symbol": "4B",
+        "TeacherID": 3
+    },
+    {
+        "YearOfStart": 2017,
+        "Symbol": "4C",
+        "TeacherID": 5
+    },
+    {
+        "YearOfStart": 2017,
+        "Symbol": "4D",
+        "TeacherID": 8
+    },
+    {
+        "YearOfStart": 2017,
+        "Symbol": "3A",
+        "TeacherID": 9
+    },
+    {
+        "YearOfStart": 2017,
+        "Symbol": "3B",
+        "TeacherID": 4
+    },
+    {
+        "YearOfStart": 2017,
+        "Symbol": "118",
+        "TeacherID": 3
+    }
+
+]
